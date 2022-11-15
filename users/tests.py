@@ -12,5 +12,5 @@ class UserRegisterationAPIViewTestCase(APITestCase):
             "password":"1234",
         }
         response = self.client.post(url, user_data)
-        print(response.data)
+        # print(response.data)
         

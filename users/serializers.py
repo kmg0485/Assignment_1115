@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from users.models import User as UserModel
+from users.models import User as UserManager
 
 
 
 class UserSignupSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserModel
-        fields="__all__"
+        model = UserManager
+        fields="username", "password"
 
     def create(self, *args, **kwargs):
         user = super().create(*args, **kwargs)
